@@ -1,0 +1,80 @@
+.car {
+    position: absolute;
+    z-index: 1;
+    bottom: 58px;
+    left: -200px;
+    animation: run 10s linear paused;
+}
+
+.car2 {
+    bottom: 137px;
+    left: -200px;
+    animation: run2 15s linear paused;
+}
+
+.car-body img {
+    width: 200px;
+    transform: scaleX(-1);
+}
+
+.tair {
+    position: absolute;
+}
+
+.tair img {
+    width: 40px;
+    animation: rotate 3s infinite linear paused;
+    position: relative;
+}
+
+.tair1 {
+    left: 35px;
+    top: 106px;
+}
+
+.tair2 {
+    left: 128px;
+    top: 106px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes run {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(600px); /* Half of the total distance */
+    }
+    100% {
+        transform: translateX(1200px); /* Full distance */
+    }
+}
+
+@keyframes slowdown {
+    0% {
+        transform: translateX(1200px); /* Full distance */
+    }
+    50% {
+        transform: translateX(800px); /* Halfway point, slowing down */
+    }
+    100% {
+        transform: translateX(600px); /* End position after slowdown */
+    }
+}
+
+@keyframes run2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(600px); /* Half of the total distance */
+    }
+    100% {
+        transform: translateX(1200px); /* Full distance */
+    }
+}
